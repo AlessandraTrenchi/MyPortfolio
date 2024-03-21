@@ -1,7 +1,9 @@
-// Include the EmailJS library dynamically
-var script = document.createElement('script');
-script.src = "https://cdn.emailjs.com/dist/email.min.js";
-document.head.appendChild(script);
+// Function to load EmailJS library dynamically
+function loadEmailJS() {
+    var script = document.createElement('script');
+    script.src = "https://cdn.emailjs.com/dist/email.min.js";
+    document.head.appendChild(script);
+}
 
 // Function to send email
 function sendEmail(emailContent) {
@@ -21,7 +23,8 @@ function sendEmail(emailContent) {
         .then(function(response) {
             console.log("Email sent successfully:", response);
             alert("Email sent successfully!");
-        }, function(error) {
+        })
+        .catch(function(error) {
             console.log("Email sending failed:", error);
             alert("Failed to send email. Please try again later.");
         });
@@ -29,6 +32,9 @@ function sendEmail(emailContent) {
 
 // Function to handle form submission
 document.addEventListener("DOMContentLoaded", function() {
+    // Load EmailJS library dynamically
+    loadEmailJS();
+
     var form = document.querySelector('.php-email-form');
 
     form.addEventListener('submit', function(event) {
