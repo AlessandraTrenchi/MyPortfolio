@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		},
+		{
+			"path": "../../../templatemo_543_breezed/assets"
+		}
+	],
+	"settings": {
+		"liveServer.settings.port": 5501
+	}
+}
