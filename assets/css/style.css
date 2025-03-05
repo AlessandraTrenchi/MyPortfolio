@@ -1158,3 +1158,10 @@ ul li a{
     padding-right: 20px 15px;
   }
 }
+
+/* Add this to your CSS file */
+.profile .img-fluid.rounded-circle {
+  width: 150px !important;
+  height: 200px !important;
+  object-fit: cover;
+}
