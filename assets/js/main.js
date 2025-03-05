@@ -259,4 +259,30 @@
    */
   new PureCounter();
 
+  function updateAge() {
+    const birthDate = new Date('1999-12-21');
+    const today = new Date();
+    
+    let age = today.getFullYear() - birthDate.getFullYear();
+    const monthDiff = today.getMonth() - birthDate.getMonth();
+    
+    // Adjust age if birthday hasn't occurred this year
+    if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birthDate.getDate())) {
+        age--;
+    }
+    
+    // Update the age in the HTML
+    const ageElement = document.getElementById('dynamic-age');
+    if (ageElement) {
+        ageElement.textContent = age;
+    }
+  }
+
+  // Call the function when the page loads
+  document.addEventListener('DOMContentLoaded', function() {
+    updateAge();
+    // Update age every day (86400000 milliseconds = 24 hours)
+    setInterval(updateAge, 86400000);
+  });
+
 })()
