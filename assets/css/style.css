@@ -28,7 +28,7 @@ h1,
 h2,
 h3,
 h4,
-h6, .services .title a {
+h6, .services .title a, .resume-title {
   font-family: "Rubik", sans-serif;
   color:#ffffa3;
 }
@@ -519,7 +519,7 @@ section {
   font-weight: 700;
   margin-top: 20px;
   margin-bottom: 20px;
-  color: #050d18;
+  color: #1657b9;
 }
 
 .resume .resume-item {
