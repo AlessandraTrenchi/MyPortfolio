@@ -337,11 +337,14 @@ h6, .services .title a, .resume-title {
   }
 }
 .portfolio-wrap img {
-  height: 14em;
   width: 100em;
   border-radius: 10%;
-
+  height: 14em;
 }
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+  }
 /*--------------------------------------------------------------
 # Sections General
 --------------------------------------------------------------*/
@@ -810,7 +813,7 @@ ul li a{
 }
 
 .testimonials .testimonial-item .testimonial-img {
-  width: 90px;
+  max-width:100%;
   border-radius: 50%;
   margin: 0 auto;
 }
